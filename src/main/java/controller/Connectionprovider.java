@@ -31,7 +31,7 @@ public class Connectionprovider {
 		return DriverManager.getConnection(dbUrl, username, password);
 	}
 
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		try {
 			Connection connection = getConnection();
 			Statement stmt = connection.createStatement();
@@ -45,5 +45,5 @@ public class Connectionprovider {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 }

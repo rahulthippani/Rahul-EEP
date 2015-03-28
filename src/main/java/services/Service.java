@@ -1,4 +1,4 @@
-package service;
+package services;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,12 +17,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import model.Emp;
 import controller.ListEmp;
-
 import controller.constants;
 
-
-@Path("employee")
-public class services {
+@Path("empp")
+public class Service {
+	
 	ObjectMapper mapper = new ObjectMapper();
 
 	// Browse all songs
@@ -44,28 +43,5 @@ public class services {
 		}
 		return Response.status(200).entity(songString).build();
 	}
-	
-	/*
-	@POST
-	@Produces({ MediaType.APPLICATION_JSON })
-	@Consumes({ MediaType.APPLICATION_JSON })
-	public Response createSongs(String payload) {
-		CreateEmp create = new CreateEmp();
-		Emp e = null;
-		String i = "";
-		try {
-			e = mapper.readValue(payload, Emp.class);
-		} catch (Exception ex) {
-			ex.printStackTrace();
-			Response.status(400).entity("could not read string").build();
-		}
-		try {
-			i = create.execute(e);
-		} catch (Exception ev) {
-			ev.printStackTrace();
-			Response.status(500).build();
-		}
-		return Response.status(200).entity(i).build();
-	}
-	*/
+
 }

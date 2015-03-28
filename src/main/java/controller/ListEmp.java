@@ -20,7 +20,7 @@ public class ListEmp {
 		try {
 			Connection connection = Connectionprovider.getConnection();
 			Statement stmt = connection.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT * FROM emp");
+			ResultSet rs = stmt.executeQuery("SELECT * FROM empp");
 			while (rs.next()) {
 				Emp e = new Emp();
 				e.setId(rs.getInt("id"));
